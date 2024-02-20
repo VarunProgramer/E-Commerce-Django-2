@@ -1,0 +1,30 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}Product details{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/product_details1.css'%}">
+{%endblock%}
+
+{%block content%}
+    <div class="container">
+        <div class="product_detail_box">
+            <div class="details">
+                <div class="img">
+                    <img src="{{product.prodect_image.url}}" alt="">
+                </div>
+                <div class="product_details">
+                        <h2>{{product.name}}</h2>
+                        <p>{{product.Prodect_oner}}</p>
+                        <div class="price">
+                            <p>Rs.<s>{{product.price}}</s></p>
+                            <a href="#"><button class="BTN">Continue</button></a>
+                        </div>
+                </div>
+            </div>
+            <div class="description">
+                <h2>description</h2>
+                <p>{{product.description}}</p>
+            </div>
+        </div>
+    </div>
+{%endblock%}

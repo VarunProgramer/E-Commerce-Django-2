@@ -1,0 +1,49 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}MESSAGE{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/message.css'%}">
+{%endblock%}
+
+{%block content%}
+<div class="box">
+    <div class="title">
+        <h1>MESSAGE</h1>
+        <div class="account cart">
+            <a href="/notification"><i class="fa fa-bell"></i></a>
+        </div>
+    </div>
+    <div class="messagers">
+        <div class="messager">
+            <div class="img"><img src="../../static/Image/104655.jpg" alt=""></div>
+            <div class="details">
+                <h3>name</h3>
+                details
+            </div>
+            <div class="account cart mess">
+                <a href="/chat_box"><i class="fa fa-message"></i></a>
+            </div>
+        </div>
+        <div class="messager">
+            <div class="img"><img src="../../static/Image/104655.jpg" alt=""></div>
+            <div class="details">
+                <h3>name</h3>
+                details
+            </div>
+            <div class="account cart mess">
+                <a href="#"><i class="fa fa-message"></i></a>
+            </div>
+        </div>
+        <div class="messager">
+            <div class="img"><img src="../../static/Image/104655.jpg" alt=""></div>
+            <div class="details">
+                <h3>name</h3>
+                details
+            </div>
+            <div class="account cart mess">
+                <a href="#"><i class="fa fa-message"></i></a>
+            </div>
+        </div>
+    </div>
+ </div>
+{%endblock%}

@@ -1,0 +1,161 @@
+html{
+    overflow-x: hidden;
+}
+.bannal{
+    background-image: url(../Image/friend.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+.bannal h1{
+    color:#ffc72d;
+}
+.prodect-box{
+    width: 90vw;
+    height: 320px;
+    margin: auto;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+}
+.prodect{
+    height: 320px;
+    width: 230px;
+}
+.img img{
+    width: 230px;
+    height: 180px;
+    
+}
+.prodect-details{
+    padding: 5px;
+    width: 230px;
+    height: 140px;
+    background-color: rgb(32, 32, 32);
+    color: #FFF;
+}
+.prodect-details h3{
+    width: 230px;
+    height: 40px;
+    overflow: hidden;
+    color: #ffc72d;
+    margin: 10px 0;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px;
+}
+.BTN-price{
+    padding: 5px 10px;
+}
+.title{
+    margin: 30px 60px 30px;
+}
+.title-BTN{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.BTN-views:hover{
+    background-color: #FFF;
+}
+.prodect-link{
+    width: 100vw;
+    min-height: 250px;
+    padding: 0 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(32, 32, 32);
+}
+.prodect-link-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+    height: 200px;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+.prodect-link img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+.prodect-title{
+    position: relative;
+    text-align: center;
+    top: 20px;
+    background-color: rgb(32, 32, 32);
+    color: #ffc72d;
+    width: 100vw;
+    padding: 20px 0;
+}
+.request-box{
+    width: 100vw;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.request{
+    width: 80vw;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-y: hidden;
+}
+.request-idem{
+    width: 200px;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+.request-img{
+    width: 100%;
+    height: 50%;
+}
+.request-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.request-details{
+    background-color: rgb(141, 140, 140);
+    
+    border-radius: 0 0 10px 10px;
+    color: #FFF;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+.BTN-request{
+    padding: 10px 50px;
+}

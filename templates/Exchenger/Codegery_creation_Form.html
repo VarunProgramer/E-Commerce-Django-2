@@ -1,0 +1,40 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}Prodect List{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/Codegery_creation_Form1.css'%}">
+{%endblock%}
+
+{%block content%}
+    <div class="container">
+        <div class="form_box">
+            <form action="" method="POST">
+                <div class="title">
+                    <h2>Create Codegery</h2>
+                </div>
+                <div class="form">
+                <!-- {{form.as_p}} -->
+                <div class="input_box">
+                    <label for="name">name :</label><br>
+                    <div class="input">{{form.name}}</div>
+                </div>
+                <div class="input_box">
+                    <label for="codegery_image">Image :</label><br>
+                    <div class="input">{{form.codegery_image}}</div>
+                </div>
+                <div class="input_box">
+                    <label for="description">description :</label><br>
+                    <div class="input">{{form.description}}</div>
+                </div>
+                <div class="add_product">
+                    <p>Add Product!  <a href="/product_list_form">here</a></p>
+                </div>
+                </div>
+                <div class="button">
+                    <button type="submit" class="BTN">Submit</button>
+                </div>
+                {% csrf_token%}
+            </form>
+        </div>
+    </div>
+{%endblock%}

@@ -1,0 +1,134 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}HOME{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/intex1.css'%}">
+{%endblock%}
+
+{%block content%}
+    <!-- -----------------------------------------------------------Bannal------------------------------------------------------------------- -->
+    <div class="bannal">
+        <h1>Exchenger</h1>
+        <p>this is the place to find and give the product</p>
+    </div>
+    <!-- -----------------------------------------------------------request------------------------------------------------------------------- -->
+    <div class="request-box">
+        <div class="request">
+                <div class="request-idem">
+                    <div class="request-img">
+                        <a href=""><img src="{%static 'Image/629544.jpg'%}" alt="request prodect"></a>
+                    </div>
+                    <div class="request-details">
+                        <h3>Product name</h3>
+                        <a href="">
+                            <button class="BTN BTN-request">OK</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="request-idem">
+                    <div class="request-img">
+                        <a href=""><img src="{%static 'Image/629544.jpg'%}" alt="request prodect"></a>
+                    </div>
+                    <div class="request-details">
+                        <h3>Product name</h3>
+                        <a href="">
+                            <button class="BTN BTN-request">OK</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="request-idem">
+                    <div class="request-img">
+                        <a href=""><img src="{%static 'Image/629544.jpg'%}" alt="request prodect"></a>
+                    </div>
+                    <div class="request-details">
+                        <h3>Product name</h3>
+                        <a href="">
+                            <button class="BTN BTN-request">OK</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="request-idem">
+                    <div class="request-img">
+                        <a href=""><img src="{%static 'Image/629544.jpg'%}" alt="request prodect"></a>
+                    </div>
+                    <div class="request-details">
+                        <h3>Product name</h3>
+                        <a href="">
+                            <button class="BTN BTN-request">OK</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="request-idem">
+                    <div class="request-img">
+                        <a href=""><img src="{%static 'Image/629544.jpg'%}" alt="request prodect"></a>
+                    </div>
+                    <div class="request-details">
+                        <h3>Product name</h3>
+                        <a href="">
+                            <button class="BTN BTN-request">OK</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="request-idem">
+                    <div class="request-img">
+                        <a href=""><img src="{%static 'Image/629544.jpg'%}" alt="request prodect"></a>
+                    </div>
+                    <div class="request-details">
+                        <h3>Product name</h3>
+                        <a href="">
+                            <button class="BTN BTN-request">OK</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="request-idem">
+                    <div class="request-img">
+                        <a href=""><img src="{%static 'Image/629544.jpg'%}" alt="request prodect"></a>
+                    </div>
+                    <div class="request-details">
+                        <h3>Product name</h3>
+                        <a href="">
+                            <button class="BTN BTN-request">OK</button>
+                        </a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- -----------------------------------------------------------prodects details------------------------------------------------------------------- -->
+    <h1 class="prodect-title">Explore the different type of products</h1>
+    <div class="prodect-link">
+        <div class="prodect-link-box">
+            {% for cadagory in cadagorys%}
+            <a href="{% url 'product_list' cadagory.id %}"><img src="{{cadagory.codegery_image.url}}" alt="{{cadagory.name}}"></a>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- -----------------------------------------------------------prodect-box------------------------------------------------------------------- -->
+    {% for cadagory in cadagorys%}
+    <div class="title">
+        <div class="title-BTN">
+            <h1>{{cadagory.name}}</h1>
+            <a href="{% url 'product_list' cadagory.id %}"><button class="BTN BTN-views">View More</button></a>
+        </div>
+        <hr>
+    </div>
+    <div class="prodect-box">
+        {% for product in products %}
+        {% if product.codegery_type == cadagory %}
+        <div class="prodect">
+            <div class="img">
+                <a href="/product_details/{{product.id}}"><img src="{{product.prodect_image.url}}" alt="prodect"></a>
+            </div>
+            <div class="prodect-details">
+                <h3>{{product.name}}</h3>
+                <p>{{product.Prodect_oner}}</p>
+                <div class="price">
+                    <p>Rs.<s>{{product.price}}</s></p>
+                    <a href="/product_details/{{product.id}}"><button class="BTN BTN-price"><strong>Exchange</strong></button></a>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endfor %}
+{%endblock%}

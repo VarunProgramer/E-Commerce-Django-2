@@ -1,0 +1,26 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}CHAT BOX{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/chatbox.css'%}">
+{%endblock%}
+
+{%block content%}
+    <div class="container">
+        <div class="title"><h2>title</h2></div>
+        <div class="message_box">
+            <div class="message">
+                <div class="sender">message 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur totam, dolorem excepturi odio pariatur suscipit! Commodi similique quas aperiam. Placeat dolorem repellat voluptatum dolore tenetur perferendis, eligendi maiores quas, vero excepturi quisquam quasi consequuntur sed pariatur, veritatis explicabo ea incidunt? Odit, nulla? Nam sunt doloribus cumque itaque accusantium commodi error quis assumenda necessitatibus! Aperiam obcaecati nulla nam eaque totam id explicabo, neque impedit harum unde fugiat consectetur, delectus necessitatibus! At exercitationem laboriosam animi minus, magnam quibusdam atque ipsam vel, cum ex fuga sapiente dicta aperiam quasi. Autem excepturi tempore, neque dolore exercitationem itaque harum rerum ex soluta aut, deserunt suscipit?</div>
+                <div class="resever">message 2</div>
+                <div class="sender">message 1</div>
+                <div class="resever">message 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto laboriosam quam animi excepturi soluta corporis, necessitatibus, beatae architecto minima sint perferendis eligendi. Atque blanditiis quasi, sit laudantium aliquam minima mollitia voluptatem accusamus. Natus aspernatur eum obcaecati, commodi ab voluptatibus hic possimus dolores assumenda saepe velit odio culpa eius nulla earum.</div>
+            </div>
+            <div class="input">
+                <input type="text">
+                <div class="account cart send">
+                    <a href="#"><i class="fa fa-message"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}

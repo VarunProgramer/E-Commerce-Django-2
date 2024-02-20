@@ -1,0 +1,74 @@
+.container{
+    width: 100vw;
+    height: 79.5vh;
+    display: grid;
+    place-items: center;
+}
+.footer-box{
+    display: none;
+}
+.form_box{
+    width: 50vw;
+    height: 70vh;
+    background-color: rgba(33, 33, 33);
+    border-radius: 20px;
+    position: relative;
+    padding: 25px;
+}
+.title{
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    color: #ffc72d;
+    text-align: center;
+    /* height: 20vh; */
+}
+.form{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    /* height: 60vh; */
+}
+.button{
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+    /* height: 20vh; */
+}
+.input_box{
+    width: 100%;
+    margin-bottom: 15px;
+    color: #FFF;
+    font-size: 1.1rem;
+}
+.input_box label{
+    position: relative;
+    top: -5px;
+}
+.input input{
+    width: 93%;
+    height: 35px;
+    font-size: 1.1rem;
+    padding: 0 10px;
+}
+.input textarea{
+    width: 93%;
+    height: 120px;
+    padding: 10px;
+    font-size: .9rem;
+    text-indent: 20px;
+}
+.BTN{
+    width: 93%;
+}
+.add_product{
+    font-size: 1.2rem;
+    color: #FFF;
+}
+.add_product a{
+    color: #ffc72d;
+}
+.add_product a:hover{
+    color: aqua;
+    text-decoration: underline;
+}

@@ -1,0 +1,49 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}NOTIFICATION{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/notification1.css'%}">
+{%endblock%}
+
+{%block content%}
+
+    <div class="box">
+        <div class="title">
+            <h1>NOTIFICATION</h1>
+            <div class="account cart">
+                <a href="/message"><i class="fa fa-message"></i></a>
+            </div>
+        </div>
+        <div class="notification-box">
+            <div class="notification">
+                <div class="details">
+                    <div class="img"><img src="../../static/Image/104284.jpg" alt=""></div>
+                    <div class="detail">
+                        <h3>name</h3>
+                        message
+                    </div>
+                    <div class="img2"><img src="../../static/Image/104284.jpg" alt=""></div>
+                </div>
+                <div class="noti-BTN">
+                    <a href="#"><button class="BTN BTN-no">NO</button></a>
+                    <a href="#"><button class="BTN BTN-ok">OK</button></a>
+                </div>
+            </div>
+            <div class="notification">
+                <div class="details">
+                    <div class="img"><img src="../../static/Image/104284.jpg" alt=""></div>
+                    <div class="detail">
+                        <h3>name</h3>
+                        message
+                    </div>
+                    <div class="img2"><img src="../../static/Image/104284.jpg" alt=""></div>
+                </div>
+                <div class="noti-BTN">
+                    <a href="#"><button class="BTN BTN-no">NO</button></a>
+                    <a href="#"><button class="BTN BTN-ok">OK</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{%endblock%}

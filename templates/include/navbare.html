@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="/home">Exchanger</a></div>
+        <div class="link">
+            <ul>
+                <li class="home_link"><a href="/">Home</a></li>
+                <li><a href="#">sevrese</a></li>
+                <li><a href="#">help</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="/logout"><button class="BTN">LOGOUT</button></a></li>
+                {% else %}
+                    <li><a href="/login"><button class="BTN">LOGIN</button></a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    <div class="nav2">
+        <div class="user">
+            {% if user.is_authenticated%}
+            <div class="user">
+                <h3>Welcome Mr/Ms. {{user.username}}</h3>
+                <p class="create"><a href="/product_list_form"><span><i class="fa fa-upload give"></i></span>Add Product</a></p>
+            </div>
+            {% else %}
+            <h3>Your are still not LOGIN</h3>
+            {% endif %}
+        </div>
+        <div class="user-help">
+            <div class="searce">
+                <form action="/search_box" method="GET">
+                    <input type="text" placeholder="Search" name="q">
+                    <button class="BTN_search" type="submit"><i class="fa fa-search"></i></button>
+                    {% csrf_token %}
+                </form>
+            </div>
+            <div class="account">
+                <a href="#"><i class="fa fa-user"></i></a>
+            </div>
+            <div class="account cart">
+                <a href="/notification"><i class="fa fa-bell"></i></a>
+            </div>
+            <div class="account cart">
+                <a href="/message"><i class="fa fa-message"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

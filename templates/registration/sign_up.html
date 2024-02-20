@@ -1,0 +1,49 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}Sign_Up{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/sign_up1.css'%}">
+{%endblock%}
+
+{%block content%}
+<section>
+    <form action="" method="POST" class="sigu_up_form">
+        <div class="title">
+            <h2>SIGN_UP</h2>
+        </div>
+        <div class="error">
+            {% if form.errors.username %}
+                <p>{{form.errors.username}}</p>
+            {% endif %}
+            {% if form.errors.email %}
+                <p>{{form.errors.email}}</p>
+            {% endif %}
+            {% if form.errors.password1 %}
+                <p>{{form.errors.password1}}</p>
+            {% endif %}
+            {% if form.errors.password2 %}
+                <p>{{form.errors.password1}}</p>
+            {% endif %}
+        </div>
+        {% csrf_token%}
+        <div class="input">
+            <label for="username">User Name :</label>
+            {{form.username}}
+        </div>
+        <div class="input">
+            <label for="Password">Email :</label>
+            {{form.email}}
+        </div>
+        <div class="input">
+            <label for="Password">Password :</label>
+            {{form.password1}}
+        </div>
+        <div class="input">
+            <label for="Password">Conform Password :</label>
+            {{form.password2}}
+        </div>
+        <p>I already have a account! Login <a href="/login">Here</a>!</p>
+        <button type="submit" class="BTN BTN-login">SIGN_UP</button>
+    </form>
+</section>
+{%endblock%}

@@ -1,0 +1,37 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}Product List{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/product_list.css'%}">
+{%endblock%}
+
+{%block content%}
+    <div class="container">
+        <div class="product-list">
+            <div class="product-box-title">
+                <h1 class="product-box-title-1">product tilte</h1>
+                <div class="product-list-box">
+                    {% for product in products %}
+                        <div class="product-cart">
+                            <div class="img">
+                                <a href="/product_details/{{product.id}}"><img src="{{product.prodect_image.url}}" alt=""></a>
+                            </div>
+                            <div class="details">
+                                <div class="title">
+                                    <h3>{{product.name}}</h3>
+                                </div>
+                                <div class="seller">
+                                    <p>{{product.Prodect_oner}}</p>
+                                </div>
+                                <div class="price">
+                                    <p>Rs.<s>{{product.price}}</s></p>
+                                    <a href="/product_details/{{product.id}}"><button class="BTN BTN-sell">Exchange</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}

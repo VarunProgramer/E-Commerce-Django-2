@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+}
+.nav-box{
+    top: 0;
+    z-index: 9999;
+}
+nav{
+    background-color: rgb(32, 32, 32);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+.logo{
+    color: #ffc72d;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.link ul{
+    list-style: none;
+    display: inline-flex;
+}
+.link ul li{
+    margin: 0 10px;
+}
+.link ul li a{
+    text-decoration: none;
+    color: #FFF;
+    position: relative;
+    top: 10px;
+}
+.link ul li a:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+.BTN{
+    background-color: #ffc72d;
+    color: #FFF;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    bottom: 10px;
+    border: 2px solid #ffc72d;
+    transition: .3s linear all;
+}
+.BTN:hover{
+    color: #ffc72d;
+    border: 2px solid #ffc72d;
+    background-color: rgb(32, 32, 32);
+}
+footer{
+    width: 100vw;
+    min-height: 300px;
+    background-color: rgb(32, 32, 32);
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box{
+    height: 230px;
+    padding: 0 20px;
+    width: 33.33%;
+    border-right: 2px solid rgba(230, 230, 230, .8);
+}
+.box:nth-child(3){
+    border: none;
+}
+.footer-title{
+    color: #ffc72d;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.box p{
+    text-align: center;
+}
+.footer-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-link ul{
+    list-style: none;
+}
+.footer-link ul li{
+    margin: 0 10px 20px;
+}
+.footer-link ul li a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 1.2rem;
+}
+.footer-link ul li:nth-child(2){
+    position: relative;
+    right: 10px;
+}
+.footer-link ul li:nth-child(3){
+    position: relative;
+    right: -5px;
+}
+.footer-link ul li a:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+.give{
+    background-color: #ffc72d;
+    color: #FFF;
+    padding: 11px;
+    border: 2px solid #ffc72d;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s linear all;
+}
+.give:hover{
+    background-color: rgb(32, 32, 32);
+    color: #ffc72d;
+}
+.nav2{
+    top: 0px;
+    background-color: #ddd7d7;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    z-index: 999;
+}
+.user{
+    position: relative;
+    top: 8px;
+}
+.user-help{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.searce{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.searce input{
+    border: 2px solid #ffc72d;
+    height: 40px;
+    width: 250px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+.searce i{
+    background-color: #ffc72d;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+/* .account{
+    position: absolute;
+    right: -50px;
+    top: 0;
+} */
+.account i{
+    background-color: #ffc72d;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #FFF;
+    color: black;
+    cursor: pointer;
+}
+.cart i{
+    border-radius: 10px 10px 10px 10px;
+}
+.create{
+    position: relative;
+    bottom: 10px;
+}
+.create span{
+    margin: 0 5px;
+}
+.BTN_search{
+    outline: none;
+    border: none;
+    background-color: #ddd7d7;
+    position: relative;
+    right: 4px;
+}
+.user{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    top: 5px;
+}
+.user a{
+    border: 3px solid #ffc72d;
+    padding: 10px 10px 10px 0;
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, .3);
+}
+.user span{
+    position: relative;
+    right: 5px;
+}
+.user:hover~.give{
+    background-color: rgb(32, 32, 32);
+    color: #ffc72d;
+}
+.logo a{
+    color: #ffc72d;
+}

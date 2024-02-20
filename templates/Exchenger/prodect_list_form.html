@@ -1,0 +1,79 @@
+{%extends 'Exchenger/base.html'%}
+{%load static%}
+{%block title%}Prodect List{%endblock%}
+{%block link%}
+    <link rel="stylesheet" href="{%static 'css/product_list_form1.css'%}">
+{%endblock%}
+
+{%block content%}
+<section>
+    <form class="input_form" action="" method="POST" enctype="multipart/form-data">
+        <div class="title">
+            <h2>Prodect Details</h2>
+        </div>
+        {% csrf_token %}
+        <div class="details">
+            <div class="input">
+                <label for="username">Prodect Type :</label>
+                {{form.codegery_type}}
+            </div>
+            <div class="input">
+                <label for="username">Prodect name :</label>
+                {{form.name}}
+            </div>
+            <div class="input">
+                <label for="Description">Description :</label>
+                {{form.description}}
+            </div>
+        </div>
+        <div class="image">
+            <div class="input">
+                <label for="price">What is the price did you Buy :</label>
+                {{form.price}}
+            </div>
+            <div class="input">
+                <label for="Password">Prodect Image :</label>
+                {{form.prodect_image}}
+            </div>
+            <div class="input">
+                <label for="Password">Can you give me the more Image :</label>
+                {{form.more_prodect_image}}
+            </div>
+            <p class="create_codegery">Create Codegery!  <a href="/codegery_creation">Here</a></p>
+        </div>
+        
+        <button type="submit" class="BTN BTN-login">Exchange</button>
+    </form>
+    <div class="error-box">
+        {% if form.errors %}
+            <div class="error">
+                {% if form.errors.codegery_type %}
+                    <h3>ERROR in category</h3>
+                    <p>{{form.errors.codegery_type}}</p>
+                {% endif %}
+                {% if form.errors.name %}
+                <h3>ERROR in Product Nmae</h3>
+                    <p>{{form.errors.name}}</p>
+                {% endif %}
+                {% if form.errors.description %}
+                <h3>ERROR in Description</h3>
+                    <p>{{form.errors.description}}</p>
+                {% endif %}
+                {% if form.errors.price %}
+                <h3>ERROR in Product Price</h3>
+                    <p>{{form.errors.price}}</p>
+                {% endif %}
+                {% if form.errors.prodect_image %}
+                <h3>ERROR in Product Image</h3>
+                    <p>{{form.errors.prodect_image}}</p>
+                {% endif %}
+                {% if form.errors.more_prodect_image %}
+                <h3>ERROR in More Product Image</h3>
+                    <p>{{form.errors.more_prodect_image}}</p>
+                {% endif %}
+            <!-- <p>{{form.errors}}</p> -->
+            </div>
+        {% endif %}
+    </div>
+</section>
+{%endblock%}
